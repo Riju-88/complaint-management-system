@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="49.745308"
+   height="57.434391"
+   viewBox="0 0 43.640903 50.386433"
+   class="css-1j8o68f"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="logo-light.svg"
+   inkscape:version="1.1-dev (278aa57, 2020-11-27)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview11"
+     showgrid="false"
+     inkscape:zoom="2.3280197"
+     inkscape:cx="210.6941"
+     inkscape:cy="28.350276"
+     inkscape:current-layer="svg9" />
+  <g
+     id="SvgjsG3713"
+     featurekey="symbolFeature-0"
+     transform="matrix(14.141575,0,0,14.141575,-13.533488,-10.153651)"
+     fill="#c9d6df">
+    <g
+       id="g6">
+      <path
+         fill="#c9d6df"
+         d="M 2.501,4.281 0.958,3.391 0.957,1.61 2.499,0.718 4.042,1.609 4.043,3.389 Z M 1.408,3.132 2.501,3.762 3.593,3.13 3.592,1.869 2.499,1.238 1.407,1.87 Z"
+         id="path2" />
+      <path
+         fill="#c9d6df"
+         d="M 2.5,3.433 1.693,2.967 1.692,2.034 2.499,1.568 3.308,2.034 V 2.966 Z M 2.143,2.707 2.5,2.913 2.857,2.706 V 2.294 L 2.5,2.088 2.143,2.294 Z"
+         id="path4" />
+    </g>
+  </g>
+</svg>
