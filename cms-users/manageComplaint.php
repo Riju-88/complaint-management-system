@@ -472,7 +472,7 @@ if (!isset($_SESSION['email'])) {
                         <a href="${obj.image}"  target="_blank">
                         <img src="${obj.image}" alt="image"></a></td>
                         <td class="fixTd">${obj.id}</td>
-                        <td><label class="badge ${obj.status=="requested"?"badge-secondary":obj.status=="pending"?"badge-warning":obj.status=="success"?"badge-success":"badge-danger"}">${obj.status}</label></td>
+                        <td><label class="badge ${obj.status=="requested"?"badge-secondary":obj.status=="pending"?"badge-warning":obj.status=="fulfilled"?"badge-success":"badge-danger"}">${obj.status}</label></td>
                         <td><button class="btn btn-primary updateButton">Edit</button></td>
                         <td><button class="btn btn-danger deleteButton">Delete</button></td>
                       </tr>`);
