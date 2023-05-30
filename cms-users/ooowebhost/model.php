@@ -8,17 +8,17 @@ require 'vendor/autoload.php';
 
 function dbConnect()
 {
-    $hostName = "localhost";
-    $userName = "root";
-    $pass = "";
-    $dbName = "cms";
+    // $hostName = "localhost";
+    // $userName = "root";
+    // $pass = "";
+    // $dbName = "cms";
 
 
     // 000webhost
-    // $hostName = "localhost";
-    // $userName = "id20681970_root";
-    // $pass = "vFV71T9]PV_R5tZ!";
-    // $dbName = "id20681970_cms";
+    $hostName = "localhost";
+    $userName = "id20681970_root";
+    $pass = "vFV71T9]PV_R5tZ!";
+    $dbName = "id20681970_cms";
 
     $connection = mysqli_connect($hostName, $userName, $pass, $dbName);
     return $connection;
