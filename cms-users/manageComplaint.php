@@ -78,7 +78,7 @@ if (!isset($_SESSION['email'])) {
               <i class="icon-bell mx-0"></i>
               <span class="count"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown" id="notificationCont">
               <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
@@ -257,10 +257,10 @@ if (!isset($_SESSION['email'])) {
                       <label class="col-sm-3 col-form-label">Category</label>
                       <div class="col-lg-12 grid-margin stretch-card">
                         <select class="form-control form-control-lg" name="category" id="category">
-                          <option value="category 1">Category1</option>
-                          <option value="category 2">Category2</option>
-                          <option value="category 3">Category3</option>
-                          <option value="category 4">Category4</option>
+                        <option value="Water Department">Water Department</option>
+                          <option value="Sanitation Department">Sanitation Department</option>
+                          <option value="Road Department">Road Department</option>
+                          <option value="Transit Department">Transit Department</option>
                         </select>
                       </div>
                     </div>
@@ -558,6 +558,46 @@ if (!isset($_SESSION['email'])) {
         }
 
       })
+
+       //  Notifications
+       const form2 = new FormData();
+      form2.append("email", hiddenEmail.value);
+      form2.append("button", "notifications");
+
+      fetch("control.php", {
+        method: "POST",
+        body: form2
+      }).then(resp => resp.json())
+      .then(data => {
+          const notificationCont= document.querySelector('#notificationCont');
+
+          if (data == "empty") {
+          notificationCont.innerHTML = `<p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>`;
+        } else {
+          const mappedData = data.map(data => 
+
+            `<a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon ${data.status=="info"?"bg-info":data.status=="fulfilled"?"bg-success":data.status=="pending"?"bg-warning":"bg-danger"}">
+                  <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">${data.message}</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    X Days ago
+                  </p>
+                </div>
+              </a>`
+          );
+
+              const finalData = mappedData.join("");
+          // display in table
+          notificationCont.innerHTML = `<p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>${finalData}`;  
+        }
+
+      })
+
     })
 
     // on click cancel update button
@@ -647,6 +687,8 @@ if (!isset($_SESSION['email'])) {
 
       })
     })
+
+    
   </script>
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
