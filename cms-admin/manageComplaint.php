@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['adminemail'])) {
   header(('location:login.php'));
 } else {
   // echo $_SESSION['name'];
@@ -123,7 +123,7 @@ if (!isset($_SESSION['email'])) {
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-            <img src="<?php echo $_SESSION['profile_image'] ?>" alt="profile"/>
+            <img src="<?php echo $_SESSION['admin_profile_image'] ?>" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
@@ -264,10 +264,10 @@ if (!isset($_SESSION['email'])) {
                       <label class="col-sm-3 col-form-label">Category</label>
                       <div class="col-lg-12 grid-margin stretch-card">
                         <select class="form-control form-control-lg" name="category" id="category">
-                          <option value="category 1">Category1</option>
-                          <option value="category 2">Category2</option>
-                          <option value="category 3">Category3</option>
-                          <option value="category 4">Category4</option>
+                        <option value="Water Department">Water Department</option>
+                          <option value="Sanitation Department">Sanitation Department</option>
+                          <option value="Road Department">Road Department</option>
+                          <option value="Transit Department">Transit Department</option>
                         </select>
                       </div>
                     </div>
@@ -362,7 +362,7 @@ if (!isset($_SESSION['email'])) {
                     </div>
                     <div class="form-group">
                       <label for="email">Email</label>
-                      <input type="email" class="form-control form-control-lg" id="deleteemail1" name="email" placeholder="Email" value="<?php echo $_SESSION['email']; ?>" readonly>
+                      <input type="email" class="form-control form-control-lg" id="deleteemail1" name="email" placeholder="Email" value="<?php echo $_SESSION['adminemail']; ?>" readonly>
                     </div>
                     <!-- Complaint id -->
                     <div class="form-group">
@@ -480,7 +480,7 @@ if (!isset($_SESSION['email'])) {
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
-  <input type="hidden" id="hiddenEmail" value="<?php echo $_SESSION["email"] ?>">
+  <input type="hidden" id="hiddenEmail" value="<?php echo $_SESSION["adminemail"] ?>">
   <script src="sweetalert2.all.min.js"></script>
   <script>
     // display table on load
